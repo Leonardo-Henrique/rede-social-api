@@ -23,7 +23,7 @@ func Carregar() {
 		log.Fatal(erro)
 	}
 
-	PortaAPI, erro = strconv.Atoi(os.Getenv("API_PORT"))
+	PortaAPI, erro = strconv.Atoi(os.Getenv("PORT"))
 	if erro != nil {
 		PortaAPI = 9000
 	}
