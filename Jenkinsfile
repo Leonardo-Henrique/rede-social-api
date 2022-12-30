@@ -1,7 +1,9 @@
 node {
+
   stage('SCM') {
     checkout scm
   }
+
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
     withSonarQubeEnv() {
@@ -10,9 +12,7 @@ node {
   }
 
   stage("build") {
-    steps {
-        echo 'BUILD EXECUTION STARTED'
-        sh 'go version'
-     }
-    }
+      echo 'BUILD EXECUTION STARTED'
+      sh 'go version'
+  }
 }
