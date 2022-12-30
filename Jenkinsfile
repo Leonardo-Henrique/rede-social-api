@@ -8,4 +8,11 @@ node {
       sh "${scannerHome}/bin/sonar-scanner"
     }
   }
+
+  stage("build") {
+    steps {
+        echo 'BUILD EXECUTION STARTED'
+        sh 'go version'
+     }
+    }
 }
