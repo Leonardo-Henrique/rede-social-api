@@ -1,5 +1,10 @@
 node {
 
+    tools {
+        go 'go'
+    }
+
+
   stage('SCM') {
     checkout scm
   }
